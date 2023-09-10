@@ -1,0 +1,163 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  background: #E7EAF3;
+}
+.loginContainer {
+  min-height: 100vh;
+  position: relative;
+}
+
+.image {
+  background: purple;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url('../assets/Wallpaper.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.formContainer {
+  background: red;
+  background: #E7EAF3;
+  box-shadow: 20px 20px 50px 20px rgb(31, 1, 31);
+  border-radius: .8rem;
+  position: absolute;
+  height: max-content;
+  margin: auto auto;
+  padding: 1.2rem;
+  width: 95%;
+  max-width: 35rem;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.formContainer img {
+  width: 8rem;
+  margin: 1.2rem auto;
+  margin-bottom: 0;
+}
+
+.form {
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+}
+
+/* INPUT GROUP STYLES */
+.input_group {
+  width: 100%;
+  padding: 2rem 0 0;
+  position: relative;
+  max-width: 28rem;
+  background: transparent;
+  margin: 0 auto;
+}
+
+.input_field {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  padding: 7px 0;
+  padding-left: .8rem;
+  background: transparent;
+  transition: border-color 0.2s;
+  margin: 0 auto;
+  font-size: 1.7rem;
+  color: rgba(var(--dark));
+}
+.input_field::placeholder {
+  color: transparent;
+}
+.input_field:placeholder-shown ~ .label_field {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+  left: .8rem;
+}
+.label_field {
+  position: absolute;
+  top: 0;
+  left: .8rem;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.input_field:focus {
+  padding-bottom: 6px;
+  /* font-weight: 700; */
+  border-width: 3px;
+  border-image: linear-gradient(to right, rgba(var(--dark-blue)), rgba(var(--blue)));
+  border-image-slice: 1;
+  background: transparent;
+}
+
+.input_field:focus ~ .label_field {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: rgba(var(--blue));
+  font-weight: 700;
+}
+
+
+
+
+
+.login_btn {
+  margin-top: 1.2rem;
+}
+
+.pass_recover {
+  margin: 1.2rem auto;
+  border: none;
+  color: rgba(var(--hover-yellow));
+  font-weight: bold;
+  transition: .3s all ease;
+}
+.pass_recover:hover {
+  color: rgba(var(--dark));
+}
+
+
+@media (min-width: 768px) {
+  .loginContainer {
+    display: grid;
+    gap: 0;
+    grid-template-columns: auto minmax(25rem, 30rem);
+  }
+  .image {
+    /* display: none; */
+    min-width: max-content;
+  }
+  .formContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: unset;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    margin-top: -4rem;
+  }
+}

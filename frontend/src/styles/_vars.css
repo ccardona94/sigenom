@@ -1,0 +1,16 @@
+/* theme-variables.css */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --green: 68, 175, 105;
+  --red: 248, 51, 60;
+  --yellow: 252, 171, 16;
+  --hover-yellow: 233, 151, 0;
+  --blue: 43, 158, 179;
+  --dark-blue: 24, 110, 126;
+  --gray: 219, 213, 181;
+  --white: 231, 234, 243;
+  --dark: 59, 59, 59;
+}
